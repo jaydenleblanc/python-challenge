@@ -6,6 +6,9 @@ import csv
 
 csvpath = os.path.join('..','python-challenge','PyPoll','Resources','election_data.csv')
 
+#Import Counter Subclass from collections module to be able to count votes from list
+from collections import Counter
+
 #Read using CSV module
 with open(csvpath) as csvfile:
 
@@ -28,14 +31,33 @@ with open(csvpath) as csvfile:
         voters.append(row[0])
 
 total_votes_cast = (len(voters))
-print(f"Total Number of votes cast: {total_votes_cast}")
 
-#Complete List of Candidates who received votes
+
+#Complete List of Candidates who received votes (return unique values only using 'set' data type)
 candidates_set = set(candidates)
 new_candidates_list = list(candidates_set)
-print(f"Candidates who received votes: {new_candidates_list}")
 
-#Percentage of Votes Each Candidate Won
+#Count number of votes for each candidate (how many times the name appears in the list)
+votes_counted = Counter(candidates)
+
+#Find Candidate with the most votes
+winner = max(votes_counted.values())
+final_list = [i for i in votes_counted.keys() if votes_counted[i]== winner]
+
+
+print("Election Results")
+print("-----------------------------------")
+print(f"Total Number of votes cast: {total_votes_cast}")
+print("-----------------------------------")
+
+#Calculate Percentage for each candidate
+sum_votes_counted = sum(votes_counted.values())
+for k,v in votes_counted.items():
+    percentage = v * 100.0 / sum_votes_counted
+    print(f" {k}:{percentage}% ({v})")
+print("------------------------------------")
+print("The Winner of the Election is:")
+print(sorted(final_list)[0])
 
 
 
