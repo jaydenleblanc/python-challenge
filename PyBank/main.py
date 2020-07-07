@@ -68,7 +68,7 @@ with open(csvpath) as csvfile:
     print(f"Greatest Increase in Profits: {greatest_increase_month} ${greatest_increase_amount}")
     print(f"Greatest Decrease in Profits: {greatest_decrease_month} ${greatest_decrease_amount}")
 
-    f = open("finalresults.txt", "a")
+    f = open("results.txt", "a")
     print("Financial Analysis", file=f)
     print("***************************", file=f)
     print("Total Number of Months in the Dataset:", file=f)
