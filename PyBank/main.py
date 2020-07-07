@@ -44,15 +44,15 @@ with open(csvpath) as csvfile:
     
 
     #Greatest Increase in profits (date & amount) MAX
-    max_index = profit_losses.index(max(profit_losses))
+    max_index = average_changes.index(max(average_changes))
     greatest_increase_month = months[max_index]
-    greatest_increase_amount = profit_losses[max_index]
+    greatest_increase_amount = average_changes[max_index]
     #print(max_index)
     
     #Greatest Decrease in profits (date & amount) MIN
-    min_index = profit_losses.index(min(profit_losses))
+    min_index = average_changes.index(min(average_changes))
     greatest_decrease_month = months[min_index]
-    greatest_decrease_amount = profit_losses[min_index]
+    greatest_decrease_amount = average_changes[min_index]
     #print(min_index)
 
 
