@@ -19,7 +19,13 @@ Technology Used:
 Project Description:
 
 PyBank:
-Using a csv file containing 87 rows and 2 columns: Date and Profit/Losses of financial data, a Python script was created to analyze and calculate the following information: 1. Total number of months included in the dataset 2. Net total amount of �Profit/Losses� over the entire period 3. Average of the changes in �Profit/Losses� over the entire period 4. Greatest increase in profits (date and amount) over the entire period 5. Greatest decrease in losses (date and amount) over the entire period
+Using a csv file containing 87 rows and 2 columns: Date and Profit/Losses of financial data, a Python script was created to analyze and calculate the following information:
+
+        1. Total number of months included in the dataset
+        2. Net total amount of �Profit/Losses� over the entire period
+        3. Average of the changes in �Profit/Losses� over the entire period
+        4. Greatest increase in profits (date and amount) over the entire period
+        5. Greatest decrease in losses (date and amount) over the entire period
 
 PyPoll:
 Similar to PyBank, using a csv file containing 3,521,002 rows of data, a Python script was created to analyze the election results of a small rural election to find the following information:
